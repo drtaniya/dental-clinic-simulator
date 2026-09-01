@@ -1,132 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dental Clinic Simulator</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8fb;
-      color: #17324d;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Clinic Simulator | Odontix</title>
 
-    .hero {
-      padding: 60px 20px 40px;
-      background: white;
-    }
+<style>
+*{box-sizing:border-box}
 
-    .logo {
-      width: 110px;
-      height: 110px;
-      border-radius: 25px;
-      object-fit: cover;
-    }
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#06131f;
+color:white;
+overflow-x:hidden;
+}
 
-    h1 {
-      font-size: 34px;
-      margin: 20px 0 10px;
-    }
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+background:
+radial-gradient(circle at 50% 20%,#164e63 0%,#06131f 55%);
+position:relative;
+}
 
-    .tagline {
-      font-size: 18px;
-      color: #607080;
-    }
+.hero:before{
+content:"🦷";
+position:absolute;
+font-size:220px;
+opacity:.06;
+top:80px;
+left:50%;
+transform:translateX(-50%);
+}
 
-    .download {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 16px 35px;
-      background: #1976d2;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+.badge{
+display:inline-block;
+padding:8px 16px;
+border:1px solid #39d9ff;
+border-radius:30px;
+color:#55e6ff;
+font-size:13px;
+letter-spacing:1px;
+}
 
-    .download:hover {
-      opacity: 0.9;
-    }
+h1{
+font-size:clamp(42px,10vw,78px);
+line-height:1;
+margin:22px 0 15px;
+background:linear-gradient(90deg,#fff,#55e6ff);
+-webkit-background-clip:text;
+color:transparent;
+}
 
-    .section {
-      max-width: 800px;
-      margin: auto;
-      padding: 35px 20px;
-    }
+.subtitle{
+font-size:20px;
+color:#b8cbd8;
+max-width:650px;
+margin:auto;
+line-height:1.6;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 20px 0;
-      border-radius: 15px;
-    }
+.download{
+display:inline-block;
+margin-top:30px;
+padding:17px 34px;
+border-radius:14px;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+color:white;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 10px 35px #0072ff55;
+transition:.25s;
+}
 
-    ul {
-      text-align: left;
-      line-height: 1.8;
-    }
+.download:hover{
+transform:translateY(-4px);
+}
 
-    footer {
-      padding: 25px;
-      color: #718096;
-    }
-  </style>
+.small{
+margin-top:15px;
+font-size:13px;
+color:#8fa6b5;
+}
+
+section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:34px;
+margin-bottom:45px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#0d2231;
+border:1px solid #18394c;
+border-radius:20px;
+padding:28px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-7px);
+border-color:#39d9ff;
+}
+
+.icon{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin:8px 0;
+font-size:21px;
+}
+
+.card p{
+color:#9fb3c0;
+line-height:1.6;
+font-size:15px;
+}
+
+.download-box{
+margin-top:30px;
+text-align:center;
+padding:45px 20px;
+border-radius:25px;
+background:linear-gradient(135deg,#102d40,#0b1c29);
+border:1px solid #214a60;
+}
+
+.install{
+color:#a9bbc7;
+line-height:1.8;
+max-width:650px;
+margin:auto;
+}
+
+footer{
+text-align:center;
+padding:35px 20px;
+color:#718897;
+border-top:1px solid #142d3b;
+}
+
+@media(max-width:600px){
+.hero{min-height:90vh}
+.subtitle{font-size:17px}
+section{padding:55px 18px}
+}
+</style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <img src="icon.png" class="logo" alt="Dental Clinic Simulator">
+<div class="hero">
+<div>
 
-    <h1>Dental Clinic Simulator</h1>
+<span class="badge">🦷 ODONTIX PRESENTS</span>
 
-    <p class="tagline">
-      Learn • Practice • Simulate Dentistry
-    </p>
+<h1>Dental Clinic<br>Simulator</h1>
 
-    <a class="download" href="#">
-      📥 Download APK
-    </a>
-  </div>
+<p class="subtitle">
+Step into your virtual dental clinic.<br>
+Perform procedures, use dental instruments
+and experience dentistry like never before.
+</p>
 
-  <div class="section">
+<a class="download" href="#">
+📥 DOWNLOAD APK
+</a>
 
-    <div class="card">
-      <h2>🦷 About the Game</h2>
-      <p>
-        Dental Clinic Simulator is a dental simulation game designed
-        for dental students and beginners. Perform dental procedures,
-        use instruments and experience a virtual dental clinic.
-      </p>
-    </div>
+<div class="small">
+FREE • ANDROID • VERSION 1.0
+</div>
 
-    <div class="card">
-      <h2>🎮 Features</h2>
-      <ul>
-        <li>🦷 Dental treatment simulation</li>
-        <li>🛠️ Realistic dental instruments</li>
-        <li>🩺 Multiple dental procedures</li>
-        <li>📚 Useful for learning and practice</li>
-        <li>🎮 Interactive gameplay</li>
-      </ul>
-    </div>
+</div>
+</div>
 
-    <div class="card">
-      <h2>📱 Installation</h2>
-      <p>
-        Download the APK and install it on your Android device.
-        You may need to allow installation from unknown sources.
-      </p>
-    </div>
 
-  </div>
+<section>
 
-  <footer>
-    © 2026 Odontix • Dental Clinic Simulator
-  </footer>
+<h2 class="title">🩺 What's Inside?</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🦷</div>
+<h3>Dental Procedures</h3>
+<p>
+Practice different dental procedures
+inside an interactive virtual clinic.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧰</div>
+<h3>Real Instruments</h3>
+<p>
+Use dental instruments and follow
+the correct clinical procedure.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🩻</div>
+<h3>Diagnosis</h3>
+<p>
+Explore dental cases and understand
+the treatment workflow.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎮</div>
+<h3>Interactive Gameplay</h3>
+<p>
+Learn dentistry while playing through
+an interactive simulation experience.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="download-box">
+
+<h2>Ready to Enter the Clinic?</h2>
+
+<p class="install">
+Download Dental Clinic Simulator for free
+and start exploring your virtual dental clinic.
+</p>
+
+<a class="download" href="#">
+🦷 PLAY DENTAL CLINIC SIMULATOR
+</a>
+
+<p class="small">
+APK Size: ~374 MB • Android
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="title">📱 How to Install</h2>
+
+<div class="card install">
+
+<p><b>1.</b> Tap the Download APK button.</p>
+
+<p><b>2.</b> Open the downloaded APK file.</p>
+
+<p><b>3.</b> If Android asks for permission,
+allow installation from this source.</p>
+
+<p><b>4.</b> Install the game and start your
+dental clinic journey! 🦷</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 <b>Odontix</b> • Dental Clinic Simulator
+
+<br><br>
+
+Made for dental students, beginners & gaming enthusiasts.
+
+</footer>
 
 </body>
 </html>
