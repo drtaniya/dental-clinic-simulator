@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drtaniya.github.io/dental-clinic-simulator/sitemap.xml
