@@ -2,9 +2,10 @@ Dental Clinic Simulator
 
 Dental Clinic Simulator is a realistic dental surgery simulation game for Android, designed for dental students, beginners, and dentistry enthusiasts.
 
-🦷 Official Website:
-https://dental-clinic-simulator.pages.dev/
-https://drtaniya.github.io/dental-clinic-simulator/
+🦷 Official Websites:
+
+- Current Website: https://dental-clinic-simulator.pages.dev/
+- GitHub Pages Website: https://drtaniya.github.io/dental-clinic-simulator/
 
 Dental Game & Dental Simulator
 
@@ -25,7 +26,6 @@ Download
 Download Dental Clinic Simulator for Android from the official website:
 
 https://dental-clinic-simulator.pages.dev/
-https://drtaniya.github.io/dental-clinic-simulator/
 
 For Dental Students
 
