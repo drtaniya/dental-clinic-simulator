@@ -12,6 +12,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Odontix Logo / Favicon -->
+<link rel="icon" href="odontix-logo.svg" type="image/svg+xml">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dental Game – Interactive Dental Simulator | Odontix">
 <meta property="og:description" content="Explore an interactive dental game and simulation for BDS students, dental interns and dentistry learners.">
@@ -38,74 +41,273 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-  background: #f7fbff;
-  color: #172033;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background:
+    radial-gradient(circle at 10% 0%, #123e55 0%, transparent 30%),
+    radial-gradient(circle at 90% 20%, #073b55 0%, transparent 28%),
+    #04111b;
+  color: #eaf9ff;
+}
+
+/* HEADER */
 header {
-  background: #0b6fa4;
-  color: white;
-  padding: 55px 20px;
+  position: relative;
+  overflow: hidden;
   text-align: center;
+  padding: 45px 20px 70px;
+  background:
+    radial-gradient(circle at 50% 0%, #155a72 0%, #092333 45%, #04111b 100%);
+  border-bottom: 1px solid #1d5268;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #00c6ff;
+  opacity: 0.08;
+  filter: blur(60px);
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 10px 18px;
+  border: 1px solid #39d9ff66;
+  background: #0c304055;
+  border-radius: 18px;
+  box-shadow: 0 0 30px #00c6ff18;
+}
+
+.logo-box img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.logo-text {
+  text-align: left;
+}
+
+.logo-text strong {
+  display: block;
+  color: #ffffff;
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+
+.logo-text span {
+  display: block;
+  color: #6eeaff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.badge {
+  position: relative;
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid #39d9ff66;
+  border-radius: 30px;
+  background: #0c304055;
+  color: #6eeaff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 18px;
 }
 
 header h1 {
-  font-size: 42px;
-  margin: 0 0 12px;
+  position: relative;
+  font-size: clamp(38px, 7vw, 64px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+  background: linear-gradient(90deg, #ffffff, #8cecff, #55e6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
+  position: relative;
   max-width: 760px;
   margin: auto;
   font-size: 18px;
+  color: #c7e8f2;
 }
 
+/* MAIN */
 main {
-  max-width: 950px;
-  margin: 35px auto;
+  max-width: 1050px;
+  margin: 45px auto;
   padding: 0 20px;
 }
 
 section {
-  background: white;
-  padding: 28px;
-  margin-bottom: 24px;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  background: linear-gradient(145deg, #0d2636, #081b28);
+  padding: 32px;
+  margin-bottom: 25px;
+  border-radius: 22px;
+  border: 1px solid #1a4053;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.20);
+}
+
+section:hover {
+  border-color: #2a6982;
 }
 
 h2 {
-  color: #0b6fa4;
+  color: #6eeaff;
   margin-top: 0;
+  font-size: 27px;
+}
+
+h3 {
+  color: #ffffff;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+p {
+  color: #c7dce5;
 }
 
 ul {
   padding-left: 22px;
+  color: #c7dce5;
 }
 
+li {
+  margin: 8px 0;
+}
+
+li::marker {
+  color: #39d9ff;
+}
+
+/* FEATURE CARDS */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  margin: 0;
+  padding: 18px;
+  border-radius: 15px;
+  background: #071923;
+  border: 1px solid #174457;
+  color: #d9f5ff;
+}
+
+.feature-list li::before {
+  content: "🦷";
+  margin-right: 9px;
+}
+
+/* CTA */
 .cta {
   text-align: center;
-  background: #e9f7ff;
+  padding: 45px 25px;
+  background:
+    radial-gradient(circle at 50% 0%, #12506a, #081d2b 65%);
+  border-color: #28708b;
+}
+
+.cta h2 {
+  font-size: 31px;
+}
+
+.cta p {
+  max-width: 650px;
+  margin: 0 auto 25px;
 }
 
 .button {
   display: inline-block;
-  background: #0b6fa4;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
   color: white;
-  padding: 13px 24px;
-  border-radius: 8px;
+  padding: 14px 27px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 8px 25px #0072ff40;
+  transition: transform .2s, box-shadow .2s;
 }
 
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px #0072ff60;
+}
+
+/* LINKS */
+a {
+  color: #6eeaff;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px 20px;
-  color: #667085;
+  padding: 35px 20px;
+  color: #7794a2;
+  border-top: 1px solid #163746;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  header {
+    padding: 35px 18px 55px;
+  }
+
+  .logo-box {
+    padding: 9px 14px;
+  }
+
+  .logo-box img {
+    width: 50px;
+    height: 50px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  main {
+    margin-top: 28px;
+    padding: 0 14px;
+  }
+
+  section {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
 }
 </style>
 </head>
@@ -113,11 +315,24 @@ footer {
 <body>
 
 <header>
+
+  <div class="logo-box">
+    <img src="odontix-logo.svg" alt="Odontix Dental Logo">
+    <div class="logo-text">
+      <strong>ODONTIX</strong>
+      <span>Dental Clinic Simulator</span>
+    </div>
+  </div>
+
+  <div class="badge">🦷 INTERACTIVE DENTAL GAME</div>
+
   <h1>Dental Game</h1>
+
   <p>
     An interactive dental simulation game for BDS students,
     dental interns and dentistry learners.
   </p>
+
 </header>
 
 <main>
@@ -148,7 +363,7 @@ provides an interactive environment where users can explore dental cases and
 practice understanding of treatment workflows.
 </p>
 
-<ul>
+<ul class="feature-list">
 <li>Preclinical dental practice</li>
 <li>Clinical dental cases</li>
 <li>Dental instruments and procedures</li>
@@ -162,25 +377,25 @@ practice understanding of treatment workflows.
 <section>
 <h2>What Can You Explore?</h2>
 
-<h3>Preclinical Dental Practice</h3>
+<h3>🦷 Preclinical Dental Practice</h3>
 <p>
 Learn basic interaction with dental instruments and simulated treatment
 steps through an interactive game environment.
 </p>
 
-<h3>Clinical Dental Cases</h3>
+<h3>🔬 Clinical Dental Cases</h3>
 <p>
 Explore simulated dental cases that introduce users to different clinical
 situations and treatment workflows.
 </p>
 
-<h3>Root Canal Treatment Simulation</h3>
+<h3>🧪 Root Canal Treatment Simulation</h3>
 <p>
 Explore a simulated root canal treatment workflow including important stages
 such as working length, instrumentation, irrigation and obturation.
 </p>
 
-<h3>Tooth Extraction Simulation</h3>
+<h3>🦷 Tooth Extraction Simulation</h3>
 <p>
 Experience an interactive extraction scenario designed as educational
 gameplay rather than real-world clinical training.
@@ -209,7 +424,7 @@ professional dental education.
 <section>
 <h2>Dental Game Features</h2>
 
-<ul>
+<ul class="feature-list">
 <li>Interactive dental gameplay</li>
 <li>Preclinical and clinical sections</li>
 <li>Case-based dental scenarios</li>
@@ -254,4 +469,4 @@ Dental Clinic Simulator
 </footer>
 
 </body>
-  </html>
+</html>
