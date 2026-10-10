@@ -7,15 +7,16 @@
 
 <meta name="google-adsense-account" content="ca-pub-3459508020002481">
 
-<meta name="google-site-verification" content="77Nrj2oc8hZPQ6GDrS4V5p_wapB16akZ9wIKt-ime00" />
+<meta name="google-site-verification" content="77Nrj2oc8hZPQ6GDrS4V5p_wapB16akZ9wIKt-ime00">
 
 <link rel="icon" type="image/png" href="/favicon.png?v=3">
+
 <title>Dental Clinic Simulator – Dental Game & Dental Simulator | Odontix</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Play Dental Clinic Simulator, a free dental game and dental simulator for Android. Explore a virtual dental clinic, dental procedures, dental instruments and simulated clinical workflows. Designed for dental students, beginners and dentistry enthusiasts.">
+<meta name="description" content="Play Dental Clinic Simulator, a free dental game and dental simulator for Android. Explore dental procedures, instruments, dental cases, tooth numbering, dental burs and root canal treatment learning resources.">
 
 <meta name="author" content="Odontix">
 <meta name="robots" content="index, follow">
@@ -24,16 +25,14 @@
 
 <link rel="canonical" href="https://dental-clinic-simulator.pages.dev/">
 
-
 <meta property="og:title" content="Dental Clinic Simulator – Dental Game & Dental Simulator">
-<meta property="og:description" content="Play a free dental simulator game for Android. Explore dental procedures, dental instruments and simulated clinical workflows.">
+<meta property="og:description" content="Explore a virtual dental clinic, interactive dental gameplay and educational resources for dental students and beginners.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dental-clinic-simulator.pages.dev/">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dental Clinic Simulator – Dental Game">
-<meta name="twitter:description" content="A free dental simulator game for dental students, beginners and dentistry enthusiasts.">
-
+<meta name="twitter:description" content="Explore dental gameplay, instruments and educational resources from Odontix.">
 
 <script type="application/ld+json">
 {
@@ -42,7 +41,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Dental Clinic Simulator",
-      "description": "A free dental simulator game for Android featuring dental procedures, dental instruments and simulated clinical workflows.",
+      "description": "An Android dental simulator game featuring dental instruments, procedures and simulated clinical workflows.",
       "applicationCategory": "GameApplication",
       "operatingSystem": "Android",
       "softwareVersion": "1.0",
@@ -72,9 +71,7 @@
 }
 </script>
 
-
 <style>
-
 *{
 box-sizing:border-box;
 scroll-behavior:smooth;
@@ -100,6 +97,7 @@ filter:blur(100px);
 top:-200px;
 left:-200px;
 pointer-events:none;
+z-index:-1;
 }
 
 body:after{
@@ -114,8 +112,12 @@ filter:blur(100px);
 bottom:-200px;
 right:-150px;
 pointer-events:none;
+z-index:-1;
 }
 
+a{
+transition:color .2s,background .2s,border-color .2s;
+}
 
 /* HERO */
 
@@ -128,9 +130,7 @@ text-align:center;
 padding:70px 20px;
 position:relative;
 overflow:hidden;
-
-background:
-radial-gradient(circle at 50% 15%,#155a72 0%,#092333 35%,#04111b 75%);
+background:radial-gradient(circle at 50% 15%,#155a72 0%,#092333 35%,#04111b 75%);
 }
 
 .hero:before{
@@ -149,8 +149,6 @@ position:relative;
 z-index:2;
 max-width:900px;
 }
-
-/* ODONTIX LOGO */
 
 .logo{
 width:110px;
@@ -175,15 +173,13 @@ box-shadow:0 0 25px #00c6ff22;
 }
 
 h1{
-font-size:clamp(46px,10vw,82px);
-line-height:.98;
+font-size:clamp(42px,8vw,78px);
+line-height:1.02;
 margin:25px 0 20px;
-
 background:linear-gradient(90deg,#ffffff,#8cecff,#55e6ff);
 -webkit-background-clip:text;
 background-clip:text;
 color:transparent;
-
 text-shadow:0 0 30px #39d9ff22;
 }
 
@@ -205,33 +201,24 @@ flex-wrap:wrap;
 
 .download{
 display:inline-block;
-padding:17px 34px;
+padding:17px 30px;
 border-radius:16px;
-
 background:linear-gradient(135deg,#00c6ff,#0072ff);
-
 color:white;
-font-size:18px;
+font-size:17px;
 font-weight:bold;
 text-decoration:none;
-
-box-shadow:
-0 10px 35px #0072ff55,
-0 0 25px #00c6ff22;
-
-transition:.25s;
+box-shadow:0 10px 35px #0072ff55,0 0 25px #00c6ff22;
 }
 
 .download:hover{
-transform:translateY(-5px) scale(1.02);
-box-shadow:
-0 15px 45px #0072ff66,
-0 0 35px #00c6ff33;
+transform:translateY(-3px);
+box-shadow:0 15px 45px #0072ff66;
 }
 
 .learn{
 display:inline-block;
-padding:16px 28px;
+padding:16px 25px;
 border-radius:16px;
 border:1px solid #39d9ff55;
 background:#0c243255;
@@ -239,12 +226,10 @@ color:#bdefff;
 font-size:16px;
 font-weight:bold;
 text-decoration:none;
-transition:.25s;
 }
 
 .learn:hover{
 background:#12384b;
-transform:translateY(-4px);
 }
 
 .small{
@@ -252,7 +237,6 @@ margin-top:16px;
 font-size:13px;
 color:#8fa9b7;
 }
-
 
 /* STATS */
 
@@ -270,7 +254,6 @@ grid-template-columns:repeat(3,1fr);
 background:#0a202eec;
 border:1px solid #214a60;
 border-radius:22px;
-backdrop-filter:blur(15px);
 overflow:hidden;
 box-shadow:0 20px 60px #00000044;
 }
@@ -297,29 +280,29 @@ color:#91aab8;
 margin-top:5px;
 }
 
-
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 section{
-padding:90px 20px;
+padding:75px 20px;
 max-width:1100px;
 margin:auto;
 }
 
 .title{
 text-align:center;
-font-size:38px;
-margin-bottom:18px;
+font-size:36px;
+line-height:1.25;
+margin:0 0 18px;
 }
 
 .section-subtitle{
 text-align:center;
-color:#91aab8;
-max-width:700px;
-margin:0 auto 45px;
-line-height:1.7;
+color:#a1b5c1;
+max-width:740px;
+margin:0 auto 38px;
+line-height:1.8;
+font-size:16px;
 }
-
 
 /* CARDS */
 
@@ -330,96 +313,234 @@ gap:22px;
 }
 
 .card{
-background:
-linear-gradient(145deg,#0d2636,#081b28);
-
+background:linear-gradient(145deg,#0d2636,#081b28);
 border:1px solid #1a4053;
 border-radius:22px;
-padding:30px;
-
-transition:.3s;
+padding:28px;
+transition:.25s;
 box-shadow:0 10px 30px #00000018;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-5px);
 border-color:#39d9ff88;
-box-shadow:0 18px 45px #00000044,0 0 25px #00c6ff0d;
+box-shadow:0 18px 45px #00000044;
 }
 
 .icon{
-font-size:44px;
-margin-bottom:15px;
+font-size:42px;
+margin-bottom:12px;
 filter:drop-shadow(0 0 12px #39d9ff44);
 }
 
 .card h3{
 margin:8px 0 12px;
-font-size:21px;
+font-size:20px;
+line-height:1.4;
 }
 
 .card p{
-color:#9fb3c0;
-line-height:1.7;
+color:#a9bdc9;
+line-height:1.8;
 font-size:15px;
+margin-bottom:0;
 }
-
 
 /* ABOUT */
 
 .about-card{
-background:
-linear-gradient(145deg,#0d2636,#071925);
-
+background:linear-gradient(145deg,#0d2636,#071925);
 border:1px solid #214a60;
-border-radius:26px;
-padding:35px;
-
+border-radius:24px;
+padding:30px;
 box-shadow:0 20px 50px #00000022;
 }
 
 .about-card p{
-color:#a9bdc9;
+color:#b0c2cc;
 line-height:1.85;
 font-size:16px;
 }
 
+/* PROMINENT LEARNING GUIDE */
+
+.guide-section{
+padding-top:35px;
+padding-bottom:60px;
+}
+
+.guide-box{
+position:relative;
+overflow:hidden;
+padding:42px;
+border:1px solid #2385a5;
+border-radius:28px;
+background:radial-gradient(circle at top right,#12485f 0%,#0b2638 45%,#071824 100%);
+box-shadow:0 20px 55px #00000030,0 0 30px #00c6ff0c;
+}
+
+.guide-box:before{
+content:"📚";
+position:absolute;
+right:24px;
+top:12px;
+font-size:100px;
+opacity:.10;
+pointer-events:none;
+}
+
+.guide-content{
+position:relative;
+z-index:1;
+max-width:790px;
+}
+
+.guide-label{
+display:inline-block;
+padding:8px 13px;
+border-radius:30px;
+background:#123d50;
+border:1px solid #28718a;
+color:#85eaff;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1.5px;
+margin-bottom:18px;
+}
+
+.guide-box h2{
+font-size:clamp(28px,5vw,42px);
+line-height:1.2;
+margin:0 0 18px;
+color:#ffffff;
+}
+
+.guide-box .guide-intro{
+font-size:17px;
+line-height:1.9;
+color:#c0d5df;
+max-width:760px;
+}
+
+.guide-topics{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:12px;
+margin:25px 0 30px;
+}
+
+.guide-topic{
+display:flex;
+align-items:flex-start;
+gap:11px;
+padding:15px;
+border:1px solid #285064;
+border-radius:14px;
+background:#071b28a8;
+color:#d7edf5;
+line-height:1.6;
+font-size:14px;
+}
+
+.guide-topic span{
+font-size:22px;
+}
+
+.guide-button{
+display:inline-block;
+padding:17px 24px;
+border-radius:14px;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+color:#ffffff;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 8px 25px #0072ff33;
+}
+
+.guide-button:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 32px #0072ff55;
+}
+
+.guide-note{
+font-size:13px;
+line-height:1.7;
+color:#92b2c1;
+margin-top:18px;
+}
+
+/* SCREENSHOTS */
+
+.screenshots{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:22px;
+}
+
+.screenshot-card{
+overflow:hidden;
+border:1px solid #214a60;
+border-radius:22px;
+background:linear-gradient(145deg,#0d2636,#081b28);
+box-shadow:0 12px 35px #00000022;
+}
+
+.screenshot-card img{
+display:block;
+width:100%;
+height:auto;
+aspect-ratio:4/5;
+object-fit:contain;
+background:#06121b;
+}
+
+.screenshot-caption{
+padding:20px;
+}
+
+.screenshot-caption h3{
+margin:0 0 8px;
+font-size:19px;
+line-height:1.4;
+color:#65e7ff;
+}
+
+.screenshot-caption p{
+margin:0;
+font-size:14px;
+line-height:1.75;
+color:#b0c2cc;
+}
 
 /* FEATURE HIGHLIGHT */
 
 .highlight{
-margin-top:35px;
 padding:35px;
-
 border-radius:26px;
 border:1px solid #214a60;
-
-background:
-radial-gradient(circle at top right,#123f55,#081a27 65%);
-
+background:radial-gradient(circle at top right,#123f55,#081a27 65%);
 text-align:center;
 }
 
 .highlight-icon{
-font-size:70px;
-filter:drop-shadow(0 0 25px #39d9ff);
+font-size:65px;
+filter:drop-shadow(0 0 20px #39d9ff);
 }
 
 .highlight h3{
-font-size:28px;
+font-size:27px;
+line-height:1.4;
 margin:15px 0 10px;
 color:#55e6ff;
 }
 
 .highlight p{
-max-width:700px;
+max-width:750px;
 margin:auto;
-color:#a9bdc9;
-line-height:1.8;
+color:#b0c2cc;
+line-height:1.85;
 }
-
-
-/* WORKFLOW */
 
 .workflow{
 display:flex;
@@ -427,11 +548,11 @@ align-items:center;
 justify-content:center;
 gap:10px;
 flex-wrap:wrap;
-margin-top:35px;
+margin-top:30px;
 }
 
 .step{
-padding:14px 18px;
+padding:13px 16px;
 border-radius:14px;
 background:#0d2939;
 border:1px solid #214a60;
@@ -445,8 +566,7 @@ color:#55e6ff;
 font-size:20px;
 }
 
-
-/* ADVERTISEMENT */
+/* ADS */
 
 .ad-container{
 max-width:1000px;
@@ -463,36 +583,29 @@ margin-bottom:8px;
 text-transform:uppercase;
 }
 
-
 /* DOWNLOAD BOX */
 
 .download-box{
-margin-top:20px;
 text-align:center;
-padding:55px 25px;
-
+padding:48px 25px;
 border-radius:30px;
-
-background:
-radial-gradient(circle at 50% 0%,#15516a,#0b1d2a 65%);
-
+background:radial-gradient(circle at 50% 0%,#15516a,#0b1d2a 65%);
 border:1px solid #2a6178;
-
 box-shadow:0 20px 60px #00000033;
 }
 
 .download-box h2{
-font-size:34px;
-margin:0 0 12px;
+font-size:clamp(26px,5vw,36px);
+line-height:1.3;
+margin:12px 0;
 }
 
 .install{
-color:#a9bbc7;
-line-height:1.8;
+color:#b0c2cc;
+line-height:1.9;
 max-width:700px;
-margin:auto;
+margin:0 auto 22px;
 }
-
 
 /* FAQ */
 
@@ -500,20 +613,22 @@ margin:auto;
 background:#0b2130;
 border:1px solid #1b4154;
 border-radius:20px;
-padding:26px 30px;
+padding:24px 26px;
 margin-bottom:15px;
 }
 
-.faq-card b{
+.faq-card h3{
 color:#55e6ff;
 font-size:17px;
+line-height:1.5;
+margin:0 0 12px;
 }
 
 .faq-card p{
-color:#a9bdc9;
-line-height:1.7;
+color:#b0c2cc;
+line-height:1.8;
+margin:0;
 }
-
 
 /* CONTACT */
 
@@ -521,27 +636,67 @@ line-height:1.7;
 text-align:center;
 }
 
-.contact a{
-color:#55e6ff;
-text-decoration:none;
+.contact .about-card{
+max-width:800px;
+margin:auto;
 }
 
+.contact a{
+color:#65e7ff;
+text-decoration:none;
+overflow-wrap:anywhere;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-top:22px;
+}
+
+.contact-links a{
+display:inline-block;
+padding:13px 18px;
+border:1px solid #28718a;
+border-radius:12px;
+background:#0b293a;
+font-weight:bold;
+}
+
+.contact-links a:hover{
+background:#12445a;
+}
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:45px 20px;
-color:#718897;
+padding:40px 20px;
+color:#91aab8;
 border-top:1px solid #142d3b;
 background:#030d14;
+line-height:1.8;
+font-size:14px;
 }
 
 footer a{
-color:#55e6ff;
+color:#65e7ff;
 text-decoration:none;
 }
 
+.footer-links{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px 22px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.footer-links a{
+padding:5px 0;
+}
 
 /* MOBILE */
 
@@ -549,7 +704,7 @@ text-decoration:none;
 
 .hero{
 min-height:92vh;
-padding:60px 18px;
+padding:55px 18px;
 }
 
 .hero:before{
@@ -563,7 +718,7 @@ margin-bottom:18px;
 }
 
 h1{
-font-size:clamp(42px,12vw,62px);
+font-size:clamp(38px,10.5vw,58px);
 }
 
 .subtitle{
@@ -592,6 +747,7 @@ grid-template-columns:1fr;
 .stat{
 border-right:none;
 border-bottom:1px solid #214a6044;
+padding:18px 12px;
 }
 
 .stat:last-child{
@@ -599,27 +755,80 @@ border-bottom:none;
 }
 
 section{
-padding:65px 18px;
+padding:55px 18px;
 }
 
 .title{
-font-size:30px;
+font-size:29px;
+}
+
+.section-subtitle{
+font-size:15px;
 }
 
 .about-card{
-padding:25px;
+padding:23px;
 }
 
 .card{
-padding:25px;
+padding:23px;
 }
 
-.download-box{
-padding:40px 20px;
+.guide-section{
+padding-top:25px;
+padding-bottom:45px;
 }
 
-.download-box h2{
-font-size:28px;
+.guide-box{
+padding:25px 21px;
+border-radius:22px;
+}
+
+.guide-box:before{
+font-size:70px;
+right:12px;
+top:12px;
+}
+
+.guide-box h2{
+font-size:29px;
+max-width:90%;
+}
+
+.guide-box .guide-intro{
+font-size:15px;
+}
+
+.guide-topics{
+grid-template-columns:1fr;
+gap:10px;
+}
+
+.guide-topic{
+padding:13px;
+}
+
+.guide-button{
+width:100%;
+text-align:center;
+padding:16px 12px;
+}
+
+.screenshots{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.screenshot-card img{
+aspect-ratio:4/5;
+}
+
+.screenshot-caption{
+padding:18px;
+}
+
+.highlight{
+padding:25px 20px;
 }
 
 .workflow{
@@ -630,38 +839,48 @@ flex-direction:column;
 transform:rotate(90deg);
 }
 
+.download-box{
+padding:35px 18px;
+}
+
+.faq-card{
+padding:21px;
+}
+
 .ad-container{
 padding:10px 5px;
 }
 
+.footer-links{
+gap:8px 16px;
 }
 
+}
 </style>
 
 </head>
 
 <body>
 
-
 <!-- HERO -->
 
-<div class="hero">
+<header class="hero">
 
 <div class="hero-content">
 
-<img class="logo" src="odontix-logo.png" alt="Odontix Dental Clinic Simulator Logo">
+<img class="logo" src="odontix-logo.png" alt="Odontix Dental Clinic Simulator logo">
 
 <span class="badge">🦷 ODONTIX PRESENTS</span>
 
 <h1>
 Dental Clinic Simulator<br>
-Dental Game & Simulator
+Dental Game &amp; Simulator
 </h1>
 
 <p class="subtitle">
-Explore a virtual dental clinic, perform simulated dental
-procedures, use dental instruments and experience dentistry
-through an interactive dental game.
+Explore a virtual dental clinic, interact with dental instruments
+and discover simulated dental procedures through an interactive
+Android dental game.
 </p>
 
 <div class="hero-buttons">
@@ -682,9 +901,7 @@ FREE • ANDROID • VERSION 1.0
 </div>
 
 </div>
-
-</div>
-
+</header>
 
 <!-- STATS -->
 
@@ -708,64 +925,128 @@ FREE • ANDROID • VERSION 1.0
 </div>
 
 </div>
-
 </div>
 
-
-<!-- ABOUT -->
+<!-- ABOUT THE SIMULATOR -->
 
 <section id="about">
 
-<h2 class="title">
-🦷 About Dental Clinic Simulator
-</h2>
+<h2 class="title">🦷 About Dental Clinic Simulator</h2>
 
 <p class="section-subtitle">
-A dental game and dental simulation experience created
-to make learning dentistry more interactive.
+An interactive dental game and virtual dental clinic experience
+created for dental students, beginners and dentistry enthusiasts.
 </p>
 
 <div class="about-card">
 
 <p>
-Dental Clinic Simulator is an interactive dental game and
-virtual dental clinic simulator created for dental students,
-beginners and dentistry enthusiasts.
+Dental Clinic Simulator is an interactive Android dental game
+developed under the Odontix name. It introduces players to a
+virtual dental environment through simulated cases, instruments
+and treatment activities.
 </p>
 
 <p>
-The simulator presents dental cases and treatment activities
-as interactive gameplay. Players can examine a virtual case,
-select available instruments and follow a simulated treatment
-sequence inside the dental clinic environment.
+Players can explore available game levels, interact with dental
+instruments and follow the simplified procedure sequences
+presented in the simulator.
 </p>
 
 <p>
-The experience combines dentistry-themed gameplay with
-basic clinical concepts. It is intended to make common dental
-procedures and instruments easier to explore in an interactive
-digital environment.
+The game combines dentistry-themed activities with interactive
+gameplay. Its purpose is to make exploring dental topics more
+engaging for beginners and people interested in dentistry.
 </p>
 
 <p>
-Dental Clinic Simulator is designed for educational exploration
-and entertainment. It does not replace dental school teaching,
-professional clinical training, diagnosis or treatment by a
-qualified dental professional.
+This is an educational simulation and entertainment experience.
+It does not replace dental education, supervised clinical training,
+professional diagnosis or treatment by a qualified dentist.
+</p>
+
+<p>
+Learn more about the project, its creator and its educational
+purpose on our <a href="about.html" style="color:#65e7ff;">About Odontix page</a>.
 </p>
 
 </div>
-
 </section>
 
+<!-- PROMINENT DENTAL LEARNING GUIDE -->
+
+<section class="guide-section" id="learning-guide">
+
+<div class="guide-box">
+
+<div class="guide-content">
+
+<span class="guide-label">ODONTIX • DENTAL EDUCATION</span>
+
+<h2>📚 Dental Learning Guide</h2>
+
+<p class="guide-intro">
+Explore our dental learning resources covering instruments,
+dental burs, tooth numbering and root canal treatment concepts.
+This guide is designed to help students and beginners revise
+important topics and understand basic dental terminology.
+</p>
+
+<div class="guide-topics">
+
+<div class="guide-topic">
+<span>🧰</span>
+<div>
+<strong>Dental Instruments</strong><br>
+Explore common instruments and their general uses.
+</div>
+</div>
+
+<div class="guide-topic">
+<span>🦷</span>
+<div>
+<strong>Dental Burs</strong><br>
+Learn about different bur shapes and their applications.
+</div>
+</div>
+
+<div class="guide-topic">
+<span>🔢</span>
+<div>
+<strong>Tooth Numbering</strong><br>
+Review tooth identification and numbering examples.
+</div>
+</div>
+
+<div class="guide-topic">
+<span>🔬</span>
+<div>
+<strong>Root Canal Treatment</strong><br>
+Explore basic endodontic concepts and workflow terminology.
+</div>
+</div>
+
+</div>
+
+<a class="guide-button" href="dental-learning.html">
+EXPLORE DENTAL LEARNING GUIDE →
+</a>
+
+<p class="guide-note">
+Educational resource for revision and general learning.
+Clinical procedures require appropriate professional training
+and supervision.
+</p>
+
+</div>
+</div>
+</section>
 
 <!-- WEBSITE AD -->
 
 <div class="ad-container">
 
-<div class="ad-label">
-Advertisement
-</div>
+<div class="ad-label">Advertisement</div>
 
 <ins class="adsbygoogle"
      style="display:block"
@@ -780,18 +1061,15 @@ Advertisement
 
 </div>
 
-
 <!-- STUDENTS -->
 
 <section>
 
-<h2 class="title">
-🎓 Dental Simulator for Students
-</h2>
+<h2 class="title">🎓 Dental Simulator for Students</h2>
 
 <p class="section-subtitle">
-Explore dental cases and simulated clinical procedures
-inside a virtual dental clinic.
+Explore dental cases and simulated clinical activities inside
+a virtual dental clinic.
 </p>
 
 <div class="cards">
@@ -809,8 +1087,8 @@ clinical cases and treatment workflows.
 <div class="icon">🧰</div>
 <h3>Dental Instruments</h3>
 <p>
-Explore different dental instruments and use them within
-simulated dental treatment procedures.
+Explore dental instruments and use them within the
+simulated treatment activities available in the game.
 </p>
 </div>
 
@@ -818,30 +1096,105 @@ simulated dental treatment procedures.
 <div class="icon">📚</div>
 <h3>Learning Through Gameplay</h3>
 <p>
-Understand basic dental workflows through an interactive
-and engaging simulation experience.
+Explore basic dental concepts through an interactive
+simulation experience.
 </p>
 </div>
 
 </div>
-
 </section>
 
-<div style="text-align:center; margin:20px 0;">
-<a href="dental-learning.html">📚 Dental Learning Guide</a>
+<!-- GAME SCREENSHOTS -->
+
+<section id="game-screenshots">
+
+<h2 class="title">🎮 Inside Dental Clinic Simulator</h2>
+
+<p class="section-subtitle">
+Take a look at screenshots from the actual Dental Clinic
+Simulator game. These images show selected screens and
+activities available in the simulator.
+</p>
+
+<div class="screenshots">
+
+<div class="screenshot-card">
+<img src="name.jpg"
+     alt="Dental Clinic Simulator game title screen"
+     loading="lazy">
+<div class="screenshot-caption">
+<h3>Welcome to Odontix</h3>
+<p>
+A look at the Dental Clinic Simulator title screen
+and its dental-themed game environment.
+</p>
 </div>
+</div>
+
+<div class="screenshot-card">
+<img src="option.jpg"
+     alt="Dental Clinic Simulator game options screen"
+     loading="lazy">
+<div class="screenshot-caption">
+<h3>Game Options</h3>
+<p>
+Explore the available game options before entering
+the dental simulation experience.
+</p>
+</div>
+</div>
+
+<div class="screenshot-card">
+<img src="burs.jpg"
+     alt="Dental burs in Dental Clinic Simulator"
+     loading="lazy">
+<div class="screenshot-caption">
+<h3>Dental Burs</h3>
+<p>
+Explore a dental burs screen from the game and
+its instrument-related gameplay.
+</p>
+</div>
+</div>
+
+<div class="screenshot-card">
+<img src="extraction.jpg"
+     alt="Dental extraction gameplay screenshot"
+     loading="lazy">
+<div class="screenshot-caption">
+<h3>Extraction Simulation</h3>
+<p>
+A screenshot of the extraction-related activity
+represented in the dental simulator.
+</p>
+</div>
+</div>
+
+<div class="screenshot-card">
+<img src="restore%20tooth.jpg"
+     alt="Tooth restoration gameplay screenshot"
+     loading="lazy">
+<div class="screenshot-caption">
+<h3>Tooth Restoration</h3>
+<p>
+View a restorative dentistry activity represented
+through the game's interactive environment.
+</p>
+</div>
+</div>
+
+</div>
+</section>
 
 <!-- PROCEDURES -->
 
 <section>
 
-<h2 class="title">
-🩺 Dental Procedures Simulator
-</h2>
+<h2 class="title">🩺 Dental Procedures Simulator</h2>
 
 <p class="section-subtitle">
-Practice simulated dental workflows and explore
-different aspects of a virtual dental clinic.
+Explore different aspects of a virtual dental clinic and
+the simplified clinical workflows represented in the game.
 </p>
 
 <div class="cards">
@@ -850,9 +1203,8 @@ different aspects of a virtual dental clinic.
 <div class="icon">🦷</div>
 <h3>Root Canal Treatment</h3>
 <p>
-Explore a simulated RCT workflow including access-related
-steps, file sequence, irrigation, gutta-percha and final
-restoration stages represented in the game.
+Explore an RCT-style workflow with selected treatment
+steps and materials represented in the simulator.
 </p>
 </div>
 
@@ -860,8 +1212,8 @@ restoration stages represented in the game.
 <div class="icon">🧰</div>
 <h3>Dental Instruments</h3>
 <p>
-Explore different instruments and learn their role inside
-simulated dental treatment workflows.
+Explore different instruments and their roles within
+simulated dental activities.
 </p>
 </div>
 
@@ -869,8 +1221,8 @@ simulated dental treatment workflows.
 <div class="icon">🩻</div>
 <h3>Dental Cases</h3>
 <p>
-Examine virtual dental cases and follow the appropriate
-simulated treatment sequence presented by the game.
+Explore virtual dental cases and follow the simplified
+treatment sequences presented in the game.
 </p>
 </div>
 
@@ -878,15 +1230,13 @@ simulated treatment sequence presented by the game.
 <div class="icon">🎮</div>
 <h3>Dental Learning Game</h3>
 <p>
-Explore basic dental concepts while playing inside a
-virtual dental clinic environment.
+Discover dentistry-themed activities through an
+interactive virtual dental clinic environment.
 </p>
 </div>
 
 </div>
-
 </section>
-
 
 <!-- RCT HIGHLIGHT -->
 
@@ -896,52 +1246,43 @@ virtual dental clinic environment.
 
 <div class="highlight-icon">🦷</div>
 
-<h3>Experience a Root Canal Treatment Workflow</h3>
+<h3>Explore a Root Canal Treatment Workflow</h3>
 
 <p>
-One of the simulated treatment experiences presents an
-RCT-style workflow. Players move through a sequence of
-dental treatment activities and interact with instruments
-and materials within the game.
+The simulator includes an RCT-style treatment experience.
+Players interact with a sequence of treatment activities
+and instruments within a simplified game environment.
+The sequence shown here is an overview of concepts associated
+with endodontic treatment, not a clinical instruction manual.
 </p>
 
 <div class="workflow">
 
 <div class="step">Rubber Dam</div>
 <div class="arrow">→</div>
-
 <div class="step">Filling Removal</div>
 <div class="arrow">→</div>
-
 <div class="step">File Sequence</div>
 <div class="arrow">→</div>
-
 <div class="step">Irrigation</div>
 <div class="arrow">→</div>
-
 <div class="step">Gutta-Percha</div>
 <div class="arrow">→</div>
-
-<div class="step">Final Filling</div>
-
-</div>
+<div class="step">Final Restoration</div>
 
 </div>
-
+</div>
 </section>
-
 
 <!-- DENTAL CASES -->
 
 <section>
 
-<h2 class="title">
-🦷 Dental Cases & Gameplay
-</h2>
+<h2 class="title">🦷 Dental Cases &amp; Gameplay</h2>
 
 <p class="section-subtitle">
-The simulator uses different dental cases and interactive
-tasks to introduce players to a variety of dental scenarios.
+Discover how examination, instrument selection and
+procedure-based tasks are represented in the simulator.
 </p>
 
 <div class="cards">
@@ -950,9 +1291,8 @@ tasks to introduce players to a variety of dental scenarios.
 <div class="icon">🔎</div>
 <h3>Case Examination</h3>
 <p>
-Players begin by examining the available dental case and
-identifying the tooth or treatment scenario presented
-inside the simulator.
+Explore the dental case or tooth scenario presented
+within the simulator.
 </p>
 </div>
 
@@ -960,17 +1300,17 @@ inside the simulator.
 <div class="icon">🧰</div>
 <h3>Instrument Selection</h3>
 <p>
-Different gameplay situations require the player to select
-an appropriate instrument or tool from the available options.
+Select from the instruments available for a particular
+gameplay activity.
 </p>
 </div>
 
 <div class="card">
 <div class="icon">🦷</div>
-<h3>Restorative & Endodontic Tasks</h3>
+<h3>Restorative &amp; Endodontic Tasks</h3>
 <p>
-Selected cases include restorative and endodontic-style
-activities represented through simplified interactive steps.
+Explore selected restorative and endodontic-style
+activities represented through simplified gameplay.
 </p>
 </div>
 
@@ -978,23 +1318,19 @@ activities represented through simplified interactive steps.
 <div class="icon">✅</div>
 <h3>Procedure Completion</h3>
 <p>
-The player progresses through the required sequence and
-completes the simulated procedure as part of the gameplay.
+Progress through the tasks and complete the simulated
+activity presented in the game.
 </p>
 </div>
 
 </div>
-
 </section>
-
 
 <!-- WHAT'S INSIDE -->
 
 <section>
 
-<h2 class="title">
-✨ What's Inside?
-</h2>
+<h2 class="title">✨ What's Inside?</h2>
 
 <div class="cards">
 
@@ -1002,7 +1338,7 @@ completes the simulated procedure as part of the gameplay.
 <div class="icon">🦷</div>
 <h3>Dental Procedures</h3>
 <p>
-Explore simulated dental procedures inside an interactive
+Explore simulated procedures in an interactive
 virtual clinic.
 </p>
 </div>
@@ -1011,8 +1347,8 @@ virtual clinic.
 <div class="icon">🧰</div>
 <h3>Clinical Instruments</h3>
 <p>
-Use dental instruments and follow simulated clinical
-treatment workflows.
+Explore instruments and the treatment workflows
+represented in the game.
 </p>
 </div>
 
@@ -1020,8 +1356,8 @@ treatment workflows.
 <div class="icon">🩻</div>
 <h3>Dental Cases</h3>
 <p>
-Explore virtual dental cases and understand the simulated
-treatment workflow associated with each gameplay scenario.
+Discover virtual dental cases and their associated
+gameplay activities.
 </p>
 </div>
 
@@ -1029,27 +1365,23 @@ treatment workflow associated with each gameplay scenario.
 <div class="icon">🎮</div>
 <h3>Interactive Gameplay</h3>
 <p>
-Learn basic dental concepts while playing through an
-interactive simulation experience.
+Explore dentistry-themed tasks through an interactive
+simulation experience.
 </p>
 </div>
 
 </div>
-
 </section>
-
 
 <!-- HOW TO PLAY -->
 
 <section>
 
-<h2 class="title">
-🎮 How to Play
-</h2>
+<h2 class="title">🎮 How to Play</h2>
 
 <p class="section-subtitle">
-Your virtual dental clinic. Examine, choose, treat and
-complete the simulated procedure.
+Explore the case, select available instruments and
+complete the simulated tasks presented in the game.
 </p>
 
 <div class="cards">
@@ -1058,8 +1390,8 @@ complete the simulated procedure.
 <div class="icon">🔍</div>
 <h3>1. Examine</h3>
 <p>
-Examine the dental case and identify the tooth
-and treatment scenario presented in the game.
+Review the dental case or scenario available
+in the game.
 </p>
 </div>
 
@@ -1067,41 +1399,37 @@ and treatment scenario presented in the game.
 <div class="icon">🧰</div>
 <h3>2. Choose Instruments</h3>
 <p>
-Select and use the available dental instruments
-for the simulated procedure.
+Select the instruments available for the
+simulated activity.
 </p>
 </div>
 
 <div class="card">
 <div class="icon">🔬</div>
-<h3>3. Perform Treatment</h3>
+<h3>3. Perform the Activity</h3>
 <p>
-Follow the simulated dental workflow using the
-required instruments and materials.
+Interact with the game and follow the steps
+provided by the simulator.
 </p>
 </div>
 
 <div class="card">
 <div class="icon">✅</div>
-<h3>4. Complete Treatment</h3>
+<h3>4. Complete the Task</h3>
 <p>
-Follow the sequence presented by the game and
-complete the simulated dental treatment.
+Finish the required sequence to progress
+through the gameplay.
 </p>
 </div>
 
 </div>
-
 </section>
 
-
-<!-- WEBSITE AD -->
+<!-- SECOND WEBSITE AD -->
 
 <div class="ad-container">
 
-<div class="ad-label">
-Advertisement
-</div>
+<div class="ad-label">Advertisement</div>
 
 <ins class="adsbygoogle"
      style="display:block"
@@ -1116,262 +1444,251 @@ Advertisement
 
 </div>
 
-
 <!-- LEARNING THROUGH SIMULATION -->
 
 <section>
 
-<h2 class="title">
-📚 Learning Through Simulation
-</h2>
+<h2 class="title">📚 Learning Through Simulation</h2>
 
 <div class="about-card">
 
 <p>
-Dental Clinic Simulator is built around the idea of learning
-through interaction. Instead of presenting dental information
-only as text, the game allows players to interact with a
-virtual clinical environment and complete simplified
-procedure-based tasks.
+Dental Clinic Simulator uses interactive gameplay to
+introduce users to a virtual clinical environment.
+Players can explore selected dental instruments and
+procedure-related activities.
 </p>
 
 <p>
-The simulator can help beginners become familiar with the
-names and general roles of dental instruments, the sequence
-of selected simulated procedures and the basic structure of
-a dental treatment workflow.
+For beginners, the game offers a way to become familiar
+with dentistry-themed terminology and simplified
+treatment workflows.
 </p>
 
 <p>
-For dental students, the game can serve as an additional
-interactive way to revise or explore concepts that they may
-already encounter in their academic education.
+Dental students can use the simulator as an additional
+way to explore topics they may encounter during their
+academic education. The accompanying Dental Learning
+Guide provides further reading on selected dental topics.
 </p>
 
 <p>
-The gameplay is intentionally simplified. Real dental
-diagnosis and treatment require clinical examination,
-radiographic assessment where appropriate, treatment
-planning, professional judgement and supervised practical
-training.
+Real dental diagnosis and treatment require clinical
+examination, appropriate investigations, treatment planning,
+professional judgement and practical training under
+qualified supervision.
 </p>
 
 </div>
-
 </section>
-
 
 <!-- FAQ -->
 
 <section>
 
-<h2 class="title">
-❓ Frequently Asked Questions
-</h2>
+<h2 class="title">❓ Frequently Asked Questions</h2>
 
 <div class="faq-card">
-
+<h3>What is Dental Clinic Simulator?</h3>
 <p>
-<b>What is Dental Clinic Simulator?</b><br><br>
-
-Dental Clinic Simulator is an interactive dental game and
-virtual dental simulator where players can explore dental
-procedures, instruments, dental cases and simulated clinical
-workflows.
+Dental Clinic Simulator is an Android dental game where
+players can explore a virtual clinic, instruments and
+selected simulated dental activities.
 </p>
-
 </div>
 
 <div class="faq-card">
-
+<h3>Is Dental Clinic Simulator free?</h3>
 <p>
-<b>Is Dental Clinic Simulator free?</b><br><br>
-
-Yes. Dental Clinic Simulator is available as a free Android game.
+The game is offered as a free Android download through
+the APK link on this website. Standard device and
+installation requirements apply.
 </p>
-
 </div>
 
 <div class="faq-card">
-
+<h3>Who is this dental game for?</h3>
 <p>
-<b>Who is this dental game for?</b><br><br>
-
-The game is designed for dental students, beginners and
-dentistry enthusiasts who want to explore dentistry through
-interactive gameplay.
+It is designed for dental students, beginners and
+dentistry enthusiasts interested in dental-themed gameplay.
 </p>
-
 </div>
 
 <div class="faq-card">
-
+<h3>Can dental students use this game for learning?</h3>
 <p>
-<b>Can dental students use this game for learning?</b><br><br>
-
-The simulator provides an interactive way to explore basic
-dental procedures, instruments and simulated workflows.
-It can be used as an additional learning and revision tool,
-but it does not replace professional dental education or
-supervised clinical training.
+The game can be an additional way to explore selected
+dental concepts. It does not replace dental education,
+practical training or supervision by qualified professionals.
 </p>
-
 </div>
 
 <div class="faq-card">
-
+<h3>Does the simulator provide real dental treatment?</h3>
 <p>
-<b>Does the simulator provide real dental treatment?</b><br><br>
-
-No. The procedures shown in the game are simulations created
-for interactive gameplay and educational exploration. The
-game should not be used as instructions for performing
-clinical treatment on real patients.
+No. It is a digital simulation for gameplay and educational
+exploration, not a tool for diagnosing patients or performing
+treatment on real teeth.
 </p>
-
 </div>
 
 <div class="faq-card">
-
+<h3>Where can I find dental learning resources?</h3>
 <p>
-<b>Where can I download the game?</b><br><br>
-
-You can download the Dental Clinic Simulator APK directly
-from this website using the download button.
+Visit the
+<a href="dental-learning.html" style="color:#65e7ff;">Dental Learning Guide</a>
+for educational content covering selected dental topics.
 </p>
+</div>
 
+<div class="faq-card">
+<h3>Where can I download the game?</h3>
+<p>
+Use either download button on this page to access the
+Dental Clinic Simulator APK.
+</p>
 </div>
 
 </section>
-
 
 <!-- DOWNLOAD -->
 
-<section>
+<section id="download">
 
 <div class="download-box">
 
-<div style="font-size:65px;filter:drop-shadow(0 0 20px #39d9ff);">
+<div style="font-size:60px;filter:drop-shadow(0 0 20px #39d9ff);">
 🦷
 </div>
 
-<h2>
-Ready to Enter the Dental Clinic?
-</h2>
+<h2>Ready to Enter the Dental Clinic?</h2>
 
 <p class="install">
-Download Dental Clinic Simulator for free and start
-exploring your virtual dental clinic.
+Download Dental Clinic Simulator for Android and explore
+a virtual dental clinic through interactive gameplay.
 </p>
-
-<br>
 
 <a class="download"
 href="https://github.com/drtaniya/dental-clinic-simulator/releases/download/v1.0.0/DentalClinicSimulator-Final.apk">
-🦷 PLAY DENTAL CLINIC SIMULATOR
+🦷 DOWNLOAD DENTAL CLINIC SIMULATOR
 </a>
 
-<p class="small">
-APK Size: ~351 MB • Android
-</p>
+<p class="small">APK download • Android</p>
 
 </div>
-
 </section>
-
 
 <!-- INSTALL -->
 
 <section>
 
-<h2 class="title">
-📱 How to Install
-</h2>
+<h2 class="title">📱 How to Install</h2>
 
 <div class="about-card">
 
-<p>
-<b>1.</b> Tap the Download APK button.
-</p>
+<p><strong>1.</strong> Tap the Download APK button and wait for the download to finish.</p>
+
+<p><strong>2.</strong> Open the downloaded APK file from your device's Downloads folder.</p>
+
+<p><strong>3.</strong> If Android asks for permission to install apps from that source, review your device's security settings and follow the system instructions.</p>
+
+<p><strong>4.</strong> Complete the installation and open the game.</p>
 
 <p>
-<b>2.</b> Open the downloaded APK file after the download
-has completed.
-</p>
-
-<p>
-<b>3.</b> If Android asks for permission to install an APK
-from the browser or file manager, follow the device's
-security instructions to allow installation from that source.
-</p>
-
-<p>
-<b>4.</b> Install the game and start your dental clinic journey! 🦷
-</p>
-
-<p>
-<b>Note:</b> Android security settings and installation
-permissions can vary by device and Android version.
+<strong>Note:</strong> Installation steps and security settings
+can vary depending on your Android version and device.
+Only install APKs from sources you trust.
 </p>
 
 </div>
-
 </section>
-
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section class="contact" id="contact">
 
-<h2 class="title">
-📩 Contact Odontix
-</h2>
+<h2 class="title">📩 Contact Odontix</h2>
+
+<p class="section-subtitle">
+Questions, feedback, suggestions or collaboration enquiries
+about Dental Clinic Simulator are welcome.
+</p>
 
 <div class="about-card">
 
 <p>
-Have questions, feedback or suggestions about
-Dental Clinic Simulator?
+Odontix welcomes genuine feedback about the website,
+the game and its educational resources.
 </p>
 
 <p>
-We would love to hear from you.
-</p>
-
-<p>
-<b>Email:</b><br><br>
-
+<strong>Email:</strong><br>
 <a href="mailto:tanugandhi1000@gmail.com">
 tanugandhi1000@gmail.com
 </a>
 </p>
 
 <p>
-For game-related questions, suggestions, feedback or
-collaboration, please contact the Odontix team by email.
+<strong>Instagram:</strong><br>
+<a href="https://www.instagram.com/odontix.dental/"
+   target="_blank"
+   rel="noopener noreferrer">
+@odontix.dental
+</a>
 </p>
+
+<div class="contact-links">
+
+<a href="mailto:tanugandhi1000@gmail.com">
+✉️ Email Odontix
+</a>
+
+<a href="https://www.instagram.com/odontix.dental/"
+   target="_blank"
+   rel="noopener noreferrer">
+📷 Instagram
+</a>
 
 </div>
 
+</div>
 </section>
 
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 <b>Odontix</b> • Dental Clinic Simulator
+<div>
+© 2026 <strong>Odontix</strong> • Dental Clinic Simulator
+</div>
 
-<br><br>
+<p>
+Created for dental students, beginners and gaming enthusiasts.
+</p>
 
-Made for dental students, beginners & gaming enthusiasts.
+<nav class="footer-links" aria-label="Footer navigation">
 
-<br><br>
+<a href="index.html">Home</a>
 
-<a href="privacy-policy.html">
-Privacy Policy
-</a>
+<a href="about.html">About Odontix</a>
+
+<a href="index.html#contact">Contact</a>
+
+<a href="dental-learning.html">Dental Learning Guide</a>
+
+<a href="dental-game.html">Dental Game</a>
+
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</nav>
+
+<p class="small">
+Dental Clinic Simulator is an educational simulation and
+entertainment experience. It does not replace professional
+dental education or clinical training.
+</p>
 
 </footer>
-
 
 </body>
 </html>
