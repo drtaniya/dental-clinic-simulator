@@ -1,620 +1,535 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dental Learning Guide – Instruments, Burs, Tooth Numbering & RCT | Odontix</title>
-
-<meta name="description" content="Learn basic dental concepts including common dental instruments, dental burs, FDI tooth numbering and the basic stages of root canal treatment. Educational guide by Odontix.">
-
+<title>Dental Learning Guide: Instruments, Burs, FDI Numbering & RCT | Odontix</title>
+<meta name="description" content="Explore a dental learning guide covering dental instruments, burs, FDI tooth numbering, root canal treatment basics and interactive dental simulation with Odontix.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://dental-clinic-simulator.pages.dev/dental-learning.html">
-
 <link rel="icon" href="/favicon.png" type="image/png">
-
 <meta name="google-adsense-account" content="ca-pub-3459508020002481">
 
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459508020002481"
-crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459508020002481" crossorigin="anonymous"></script>
 
 <style>
-*{
-box-sizing:border-box;
+:root{
+  --navy:#102b46;
+  --blue:#1769aa;
+  --teal:#10a99a;
+  --pale:#edf7fb;
+  --ink:#243447;
+  --muted:#617184;
+  --white:#fff;
+  --border:#dce8ef;
 }
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f8fb;
-color:#17202a;
-line-height:1.7;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f8fc;
+  color:var(--ink);
+  line-height:1.75;
 }
-
+a{color:var(--blue)}
 header{
-background:#ffffff;
-padding:22px 18px;
-text-align:center;
-border-bottom:1px solid #e3e8ed;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--border);
+  padding:17px 20px;
 }
-
+.nav-wrap{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
 .logo{
-font-size:22px;
-font-weight:700;
-letter-spacing:1px;
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:var(--navy);
 }
-
-.logo span{
-margin-right:6px;
-}
-
-nav{
-margin-top:14px;
-}
-
+.logo span{color:var(--teal)}
+nav{display:flex;gap:17px;flex-wrap:wrap}
 nav a{
-color:#1769aa;
-text-decoration:none;
-margin:0 9px;
-font-weight:600;
-font-size:14px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
 }
-
-.container{
-max-width:950px;
-margin:auto;
-padding:28px 18px 60px;
-}
-
+nav a:hover{text-decoration:underline}
+.container{max-width:1050px;margin:auto;padding:28px 18px 55px}
 .hero{
-background:#ffffff;
-padding:34px 24px;
-border-radius:16px;
-box-shadow:0 4px 18px rgba(0,0,0,0.06);
-margin-bottom:28px;
+  background:linear-gradient(135deg,#102b46,#1769aa 70%,#10a99a);
+  color:white;
+  padding:42px 30px;
+  border-radius:22px;
+  margin-bottom:22px;
+  box-shadow:0 12px 30px rgba(16,43,70,.13);
 }
-
-h1{
-margin-top:0;
-font-size:34px;
-line-height:1.2;
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:bold;
+  color:#bdf5e9;
 }
-
-h2{
-font-size:25px;
-margin-top:0;
+h1{font-size:clamp(30px,5vw,44px);line-height:1.2;margin:10px 0 16px}
+.hero p{max-width:760px;color:#edf7ff}
+.hero .cta{
+  display:inline-block;
+  margin-top:12px;
+  background:white;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:bold;
+  padding:12px 19px;
+  border-radius:10px;
 }
-
-h3{
-font-size:19px;
+.quick-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:20px 0 30px;
 }
-
+.quick-links a{
+  display:inline-block;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:7px 13px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:bold;
+}
 .card{
-background:#ffffff;
-padding:24px;
-border-radius:14px;
-margin:22px 0;
-box-shadow:0 3px 14px rgba(0,0,0,0.05);
+  background:white;
+  padding:27px;
+  border:1px solid #e8eef3;
+  border-radius:18px;
+  margin:22px 0;
+  box-shadow:0 5px 20px rgba(20,55,80,.045);
 }
-
+h2{font-size:26px;line-height:1.35;color:var(--navy);margin:0 0 14px}
+h3{font-size:19px;color:#165c83;margin:22px 0 7px}
+p{margin:10px 0}
+.lead{color:var(--muted);font-size:16px}
+.tag{
+  display:inline-block;
+  background:#e4f8f4;
+  color:#087c70;
+  border-radius:20px;
+  padding:4px 10px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.mini{
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  background:#fbfdff;
+}
+.mini h3{margin-top:0}
 table{
-width:100%;
-border-collapse:collapse;
-margin:18px 0;
-background:#ffffff;
+  width:100%;
+  border-collapse:collapse;
+  margin:18px 0;
+  font-size:15px;
 }
-
 th,td{
-border:1px solid #dce3e8;
-padding:12px;
-text-align:left;
-vertical-align:top;
+  border:1px solid var(--border);
+  padding:12px;
+  text-align:left;
+  vertical-align:top;
 }
-
-th{
-background:#eef4f8;
+th{background:#eaf4fa;color:var(--navy)}
+.note,.warning{
+  padding:15px 17px;
+  margin:18px 0;
+  border-radius:9px;
 }
-
-.note{
-background:#eef7ff;
-border-left:5px solid #2878b5;
-padding:16px;
-margin:18px 0;
+.note{background:#eaf8f7;border-left:4px solid var(--teal)}
+.warning{background:#fff7e6;border-left:4px solid #d59a23}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:20px;
 }
-
-.warning{
-background:#fff8e8;
-border-left:5px solid #d69b18;
-padding:16px;
-margin:18px 0;
+figure{
+  margin:0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
 }
-
+figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:520px;
+  object-fit:contain;
+  background:#edf2f6;
+}
+figcaption{padding:14px 16px}
+figcaption strong{display:block;color:var(--navy);margin-bottom:4px}
+figcaption span{display:block;color:var(--muted);font-size:14px}
+.wide{grid-column:1/-1}
+.wide img{max-height:650px}
+.steps{padding-left:22px}
+.steps li{padding:5px 0}
+.button{
+  display:inline-block;
+  background:var(--blue);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:12px 18px;
+  border-radius:9px;
+  margin-top:10px;
+}
+.faq{padding:14px 0;border-bottom:1px solid var(--border)}
+.faq:last-child{border-bottom:0}
+.faq h3{margin:0 0 5px}
 .ad-container{
-margin:30px 0;
-padding:10px 0;
-text-align:center;
+  margin:28px 0;
+  min-height:90px;
+  text-align:center;
+  overflow:hidden;
 }
-
-.ad-label{
-font-size:11px;
-color:#777;
-margin-bottom:5px;
-}
-
-.back{
-display:inline-block;
-margin-top:15px;
-padding:10px 16px;
-background:#1769aa;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
+.ad-label{font-size:11px;color:#7b8794;margin-bottom:5px}
 footer{
-background:#ffffff;
-border-top:1px solid #e3e8ed;
-padding:25px 18px;
-text-align:center;
-font-size:14px;
-color:#66727d;
+  background:#102b46;
+  color:#e4edf5;
+  padding:28px 18px;
+  text-align:center;
+  font-size:14px;
 }
-
+footer a{color:#b9e8ff;margin:0 7px}
+footer p{margin:8px 0}
 @media(max-width:650px){
-h1{
-font-size:28px;
-}
-
-h2{
-font-size:22px;
-}
-
-.card{
-padding:19px;
-}
-
-table{
-font-size:14px;
-}
+  header{padding:15px}
+  .nav-wrap{align-items:flex-start}
+  nav{gap:10px}
+  nav a{font-size:13px}
+  .container{padding:18px 12px 38px}
+  .hero{padding:30px 21px;border-radius:16px}
+  .card{padding:20px 16px;border-radius:14px}
+  h2{font-size:23px}
+  .grid,.gallery{grid-template-columns:1fr}
+  .wide{grid-column:auto}
+  table{font-size:13px}
+  th,td{padding:8px}
 }
 </style>
 </head>
 
 <body>
-
 <header>
-
-<div class="logo">
-<span>🦷</span> ODONTIX
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="dental-game.html">Simulator</a>
-<a href="dental-learning.html">Dental Learning</a>
-<a href="privacy-policy.html">Privacy</a>
-</nav>
-
+  <div class="nav-wrap">
+    <div class="logo"><span>🦷</span> ODONTIX</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="dental-game.html">Simulator</a>
+      <a href="dental-learning.html">Learning Guide</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </div>
 </header>
 
 <main class="container">
 
 <section class="hero">
+  <div class="eyebrow">Learn • Explore • Practise concepts</div>
+  <h1>Dental Learning Guide</h1>
+  <p>
+    Explore commonly used dental instruments, understand dental bur
+    shapes, learn the FDI tooth numbering system and review the basic
+    stages of root canal treatment. This guide is designed for dental
+    students, beginners and anyone interested in dentistry.
+  </p>
+  <p>
+    Learn the concepts and then explore selected virtual cases in the
+    Odontix Dental Clinic Simulator.
+  </p>
+  <a class="cta" href="dental-game.html">Explore the Dental Simulator →</a>
+</section>
 
-<h1>🦷 Dental Learning Guide</h1>
+<div class="quick-links" aria-label="Guide sections">
+  <a href="#instruments">Dental instruments</a>
+  <a href="#burs">Dental burs</a>
+  <a href="#numbering">Tooth numbering</a>
+  <a href="#rct">RCT basics</a>
+  <a href="#simulator">Game screenshots</a>
+  <a href="#faq">FAQs</a>
+</div>
 
-<p>
-Welcome to the Odontix Dental Learning Guide. This page introduces
-basic dental concepts that can help beginners and dental students
-understand commonly used instruments, dental burs, tooth numbering
-and the general sequence of root canal treatment.
-</p>
+<section class="card" id="instruments">
+  <span class="tag">Study notes</span>
+  <h2>🧰 Common Dental Instruments</h2>
+  <p class="lead">
+    Dental instruments are designed for examination, restorative,
+    periodontal, endodontic and surgical tasks. Learning their names
+    and general purposes helps students become familiar with the
+    clinical environment.
+  </p>
 
-<p>
-The information is provided for educational purposes and is intended
-to complement formal dental education. Clinical procedures on real
-patients require appropriate education, supervision, diagnosis,
-treatment planning and professional judgment.
-</p>
+  <table>
+    <thead><tr><th>Instrument</th><th>General purpose</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Mouth mirror</strong></td><td>Provides indirect vision and can help with soft-tissue retraction.</td></tr>
+      <tr><td><strong>Explorer / probe</strong></td><td>Assists with examination of tooth surfaces and clinical features.</td></tr>
+      <tr><td><strong>College tweezers</strong></td><td>Carry and place small items such as cotton pellets.</td></tr>
+      <tr><td><strong>Spoon excavator</strong></td><td>Used in selected restorative procedures to remove soft carious dentin.</td></tr>
+      <tr><td><strong>Scaler</strong></td><td>Designed for removal of calculus during periodontal instrumentation.</td></tr>
+      <tr><td><strong>Dental forceps</strong></td><td>Used for tooth extraction according to tooth anatomy and the clinical situation.</td></tr>
+    </tbody>
+  </table>
 
+  <div class="note">
+    <strong>Learning point:</strong> Instrument choice and use depend on
+    the clinical task, instrument design and the operator's training.
+    This table is an introduction, not a clinical procedure manual.
+  </div>
+</section>
+
+<section class="card" id="burs">
+  <span class="tag">Instrument basics</span>
+  <h2>🔩 Understanding Dental Burs</h2>
+  <p>
+    Dental burs are rotary instruments available in different shapes,
+    sizes and cutting designs. Selection depends on the procedure,
+    tooth structure, material and compatible handpiece.
+  </p>
+
+  <div class="gallery">
+    <figure class="wide">
+      <img src="./burs.jpg" alt="Dental burs shown for learning about different bur shapes" loading="lazy">
+      <figcaption>
+        <strong>Dental bur reference</strong>
+        <span>Observe the different bur shapes and compare their outlines. Shape alone does not determine the correct clinical choice.</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="grid">
+    <div class="mini">
+      <h3>Round burs</h3>
+      <p>Have a spherical cutting head. Certain designs may be used in selected cavity preparation tasks.</p>
+    </div>
+    <div class="mini">
+      <h3>Fissure burs</h3>
+      <p>Have an elongated cutting surface and are available in different designs.</p>
+    </div>
+    <div class="mini">
+      <h3>Tapered burs</h3>
+      <p>Narrow toward one end and have geometry suited to particular preparation designs.</p>
+    </div>
+    <div class="mini">
+      <h3>Why shape matters</h3>
+      <p>Bur dimensions, cutting design, access and the intended task all influence selection.</p>
+    </div>
+  </div>
+
+  <div class="warning">
+    <strong>Clinical safety:</strong> Rotary instruments can injure teeth
+    and soft tissues if used incorrectly. Use requires appropriate
+    training, supervision and protective measures.
+  </div>
+</section>
+
+<section class="card" id="numbering">
+  <span class="tag">Dental anatomy</span>
+  <h2>🔢 FDI Tooth Numbering System</h2>
+  <p>
+    The FDI two-digit notation system identifies teeth using a quadrant
+    digit followed by a tooth-position digit. It is commonly used in
+    dental records and communication.
+  </p>
+
+  <h3>Permanent dentition quadrants</h3>
+  <table>
+    <thead><tr><th>First digit</th><th>Quadrant</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Upper right</td></tr>
+      <tr><td>2</td><td>Upper left</td></tr>
+      <tr><td>3</td><td>Lower left</td></tr>
+      <tr><td>4</td><td>Lower right</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    The second digit runs from 1 for the central incisor to 8 for the
+    third molar within each permanent quadrant.
+  </p>
+
+  <div class="grid">
+    <div class="mini"><h3>Tooth 11</h3><p>Maxillary right central incisor.</p></div>
+    <div class="mini"><h3>Tooth 36</h3><p>Mandibular left first molar.</p></div>
+    <div class="mini"><h3>Tooth 44</h3><p>Mandibular right first premolar.</p></div>
+    <div class="mini"><h3>Memory aid</h3><p>First digit = quadrant; second digit = tooth position.</p></div>
+  </div>
+</section>
+
+<section class="card" id="rct">
+  <span class="tag">Endodontic overview</span>
+  <h2>🩺 Root Canal Treatment (RCT) Basics</h2>
+  <p>
+    Root canal treatment manages disease or injury involving the dental
+    pulp and root canal system. The treatment plan depends on diagnosis,
+    tooth anatomy and individual clinical findings.
+  </p>
+
+  <ol class="steps">
+    <li><strong>Assessment and diagnosis:</strong> Review relevant history, examination findings and diagnostic investigations.</li>
+    <li><strong>Isolation:</strong> Establish an appropriate working environment and control moisture.</li>
+    <li><strong>Access:</strong> Prepare access to the pulp chamber and canal system.</li>
+    <li><strong>Cleaning and shaping:</strong> Prepare the canal system using a suitable technique and instrument system.</li>
+    <li><strong>Irrigation:</strong> Use appropriate irrigating solutions as part of canal cleaning, with attention to safe use.</li>
+    <li><strong>Obturation:</strong> Fill the prepared canal system using suitable materials when indicated.</li>
+    <li><strong>Final restoration:</strong> Restore the tooth based on the remaining structure and clinical assessment.</li>
+  </ol>
+
+  <div class="note">
+    <strong>Remember:</strong> This is a simplified learning overview.
+    It does not replace clinical diagnosis, supervised endodontic
+    training or patient-specific treatment planning.
+  </div>
+</section>
+
+<section class="card">
+  <span class="tag">Essential vocabulary</span>
+  <h2>📚 Dental Terms for Beginners</h2>
+
+  <h3>Clinical examination</h3>
+  <p>Assessment using relevant patient history and appropriate examination methods.</p>
+
+  <h3>Diagnosis</h3>
+  <p>Identification of a condition based on clinical findings and diagnostic information.</p>
+
+  <h3>Restoration</h3>
+  <p>A treatment used to restore the form or function of a tooth affected by caries, fracture, wear or other damage.</p>
+
+  <h3>Endodontics</h3>
+  <p>The branch of dentistry concerned with the dental pulp and tissues surrounding tooth roots.</p>
+
+  <h3>Periodontics</h3>
+  <p>The branch of dentistry concerned with the supporting tissues of teeth, including gingiva, periodontal ligament and alveolar bone.</p>
+</section>
+
+<section class="card" id="simulator">
+  <span class="tag">Explore Odontix</span>
+  <h2>🎮 Dental Clinic Simulator: Visual Tour</h2>
+  <p class="lead">
+    Explore screenshots from the Odontix Dental Clinic Simulator.
+    These images give visitors a look at the game's interface and
+    selected dental learning scenarios.
+  </p>
+
+  <div class="gallery">
+    <figure>
+      <img src="./name.jpg" alt="Odontix Dental Clinic Simulator title or opening screen" loading="lazy">
+      <figcaption>
+        <strong>Meet the simulator</strong>
+        <span>Explore the game's opening screen and identify the simulator you are about to use.</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./option.jpg" alt="Options or selection screen in Dental Clinic Simulator" loading="lazy">
+      <figcaption>
+        <strong>Explore the options</strong>
+        <span>Review the visible choices in the game and become familiar with its navigation.</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./extraction.jpg" alt="Dental Clinic Simulator screenshot related to a tooth extraction case" loading="lazy">
+      <figcaption>
+        <strong>Extraction case</strong>
+        <span>A virtual dental scenario for exploring a simplified clinical case in the simulator.</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./restore%20tooth.jpg" alt="Dental Clinic Simulator screenshot showing a tooth restoration scenario" loading="lazy">
+      <figcaption>
+        <strong>Tooth restoration</strong>
+        <span>Explore a virtual tooth-related scenario and connect the game with introductory dental concepts.</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="note">
+    <strong>Educational purpose:</strong> The simulator is an interactive
+    learning and entertainment resource. Game actions do not represent
+    complete real-world clinical procedures.
+  </div>
+
+  <a class="button" href="dental-game.html">Open Dental Clinic Simulator →</a>
+</section>
+
+<section class="card" id="faq">
+  <span class="tag">Quick answers</span>
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <h3>Is this guide a substitute for dental school?</h3>
+    <p>No. It is an introductory resource to complement formal education and supervised practical training.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Can I use this page to treat a patient?</h3>
+    <p>No. It provides general educational information, not patient-specific diagnosis or treatment instructions.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Is the simulator identical to a real dental clinic?</h3>
+    <p>No. It is a digital simulation with simplified scenarios and cannot reproduce all aspects of clinical practice.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Who can use this learning guide?</h3>
+    <p>Dental students, beginners and dentistry enthusiasts can use it to review basic concepts.</p>
+  </div>
 </section>
 
 <div class="ad-container">
-
-<div class="ad-label">Advertisement</div>
-
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-3459508020002481"
-data-ad-slot="4532034659"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+  <div class="ad-label">Advertisement</div>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-3459508020002481"
+       data-ad-slot="4532034659"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </div>
-
-<section class="card">
-
-<h2>🧰 Common Dental Instruments</h2>
-
-<p>
-Dental instruments are designed for specific examination,
-restorative, periodontal, endodontic and surgical tasks. Knowing
-their general purpose is an important part of becoming familiar
-with the dental clinical environment.
-</p>
-
-<table>
-
-<tr>
-<th>Instrument</th>
-<th>General purpose</th>
-</tr>
-
-<tr>
-<td>Mouth mirror</td>
-<td>Indirect vision, viewing difficult areas and assisting with
-soft-tissue retraction.</td>
-</tr>
-
-<tr>
-<td>Explorer / probe</td>
-<td>Used as an examination instrument for assessing tooth surfaces
-and detecting clinical features.</td>
-</tr>
-
-<tr>
-<td>College tweezers</td>
-<td>Used to carry and place small items such as cotton pellets and
-other materials.</td>
-</tr>
-
-<tr>
-<td>Spoon excavator</td>
-<td>Used in selected restorative procedures for removing soft,
-carious dentin.</td>
-</tr>
-
-<tr>
-<td>Scaler</td>
-<td>Designed for removal of calculus during periodontal
-instrumentation.</td>
-</tr>
-
-<tr>
-<td>Dental forceps</td>
-<td>Used during tooth extraction according to the tooth and
-clinical situation.</td>
-</tr>
-
-</table>
-
-<div class="note">
-<strong>Learning point:</strong> An instrument's exact use depends
-on its design, the clinical procedure and the operator's training.
-Instrument names alone should not be treated as instructions for
-clinical treatment.
-</div>
-
-</section>
-
-<section class="card">
-
-<h2>🔩 Understanding Dental Burs</h2>
-
-<p>
-Dental burs are rotary cutting instruments available in different
-shapes and sizes. Their selection depends on the procedure, tooth
-structure, material being removed and the handpiece system being
-used.
-</p>
-
-<h3>Round burs</h3>
-
-<p>
-Round burs have a spherical cutting head. They may be used for
-specific cavity preparation and removal of selected carious tooth
-structure depending on the clinical situation.
-</p>
-
-<h3>Fissure burs</h3>
-
-<p>
-Fissure burs have an elongated cutting surface. Straight and
-cross-cut designs are available and may be used for different
-preparation tasks.
-</p>
-
-<h3>Tapered burs</h3>
-
-<p>
-Tapered burs have a cutting head that narrows toward one end.
-Their geometry can be useful when a preparation requires
-particular wall or access shapes.
-</p>
-
-<h3>Why bur selection matters</h3>
-
-<p>
-Bur selection is not based only on its name. The clinician considers
-the tooth, material, preparation design, access, bur dimensions and
-the procedure being performed.
-</p>
-
-<div class="warning">
-<strong>Clinical safety:</strong> Rotary dental instruments can cause
-injury when used incorrectly. This educational page does not provide
-instructions for performing procedures on real patients.
-</div>
-
-</section>
-
-<div class="ad-container">
-
-<div class="ad-label">Advertisement</div>
-
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-3459508020002481"
-data-ad-slot="4532034659"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-
-<section class="card">
-
-<h2>🔢 FDI Tooth Numbering</h2>
-
-<p>
-The FDI two-digit notation system is widely used in dentistry to
-identify permanent and primary teeth. The first digit identifies
-the quadrant and the second digit identifies the tooth position
-within that quadrant.
-</p>
-
-<h3>Permanent dentition</h3>
-
-<table>
-
-<tr>
-<th>Quadrant</th>
-<th>Permanent teeth</th>
-</tr>
-
-<tr>
-<td>1</td>
-<td>Upper right</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>Upper left</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>Lower left</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>Lower right</td>
-</tr>
-
-</table>
-
-<p>
-Within a permanent quadrant, the teeth are numbered from the
-central incisor as 1 through the third molar as 8.
-</p>
-
-<p>
-For example, tooth <strong>11</strong> is the maxillary right central
-incisor, while <strong>36</strong> is the mandibular left first molar.
-Tooth <strong>44</strong> is the mandibular right first premolar.
-</p>
-
-<div class="note">
-<strong>Memory aid:</strong> In the FDI system, the first digit tells
-you the quadrant and the second digit tells you the tooth position.
-</div>
-
-</section>
-
-<section class="card">
-
-<h2>🩺 Root Canal Treatment Basics</h2>
-
-<p>
-Root canal treatment, commonly called RCT, is an endodontic
-procedure used to manage disease or injury involving the dental
-pulp and root canal system.
-</p>
-
-<p>
-The exact treatment plan depends on the clinical findings,
-diagnosis, tooth anatomy and other factors. A simplified educational
-overview of an RCT workflow may include the following stages.
-</p>
-
-<h3>1. Assessment and diagnosis</h3>
-
-<p>
-The tooth is assessed using appropriate history, clinical
-examination and diagnostic investigations. The diagnosis guides
-treatment planning.
-</p>
-
-<h3>2. Isolation</h3>
-
-<p>
-The operative field is isolated to help control moisture and
-maintain an appropriate working environment.
-</p>
-
-<h3>3. Access</h3>
-
-<p>
-An access cavity is prepared to allow entry into the pulp chamber
-and access to the canal system.
-</p>
-
-<h3>4. Cleaning and shaping</h3>
-
-<p>
-Endodontic instruments are used to clean and shape the root canal
-system. The sequence and technique depend on the clinical case and
-instrument system.
-</p>
-
-<h3>5. Irrigation</h3>
-
-<p>
-Irrigating solutions are used during endodontic treatment to assist
-with cleaning the canal system. Their selection and safe use require
-professional training.
-</p>
-
-<h3>6. Obturation</h3>
-
-<p>
-After appropriate preparation, the cleaned canal system is filled
-using suitable obturation materials to help seal the prepared space.
-</p>
-
-<h3>7. Final restoration</h3>
-
-<p>
-The tooth requires an appropriate definitive restoration after
-endodontic treatment. The restoration depends on the tooth,
-remaining structure and clinical assessment.
-</p>
-
-</section>
-
-<section class="card">
-
-<h2>📚 Dental Terms Beginners Should Know</h2>
-
-<h3>Clinical examination</h3>
-
-<p>
-The process of assessing a patient through history and appropriate
-clinical examination to identify relevant findings.
-</p>
-
-<h3>Diagnosis</h3>
-
-<p>
-The identification of a disease or condition based on relevant
-history, examination and diagnostic information.
-</p>
-
-<h3>Restoration</h3>
-
-<p>
-A dental restoration is used to restore the form and function of a
-tooth affected by caries, fracture, wear or another condition.
-</p>
-
-<h3>Endodontics</h3>
-
-<p>
-Endodontics is the area of dentistry concerned with the dental pulp
-and tissues surrounding the roots of teeth.
-</p>
-
-<h3>Periodontics</h3>
-
-<p>
-Periodontics focuses on the supporting structures of teeth,
-including gingiva, periodontal ligament, cementum and alveolar bone.
-</p>
-
-</section>
-
-<section class="card">
-
-<h2>🎮 Learning With Dental Clinic Simulator</h2>
-
-<p>
-The Odontix Dental Clinic Simulator converts selected dental
-concepts into interactive gameplay. Instead of presenting every
-concept as text, the simulator allows players to explore a virtual
-clinical environment and interact with simplified dental cases,
-instruments and treatment sequences.
-</p>
-
-<p>
-The game is intended as an additional educational and entertainment
-resource. It should not be used as a substitute for dental school
-education, supervised clinical training, patient examination or
-professional treatment planning.
-</p>
-
-<a class="back" href="dental-game.html">
-🎮 Explore the Simulator
-</a>
-
-</section>
-
-<section class="card">
-
-<h2>❓ Frequently Asked Questions</h2>
-
-<h3>Is this page a substitute for dental school?</h3>
-
-<p>
-No. It is an introductory educational resource and should be used
-alongside formal dental education and supervised practical training.
-</p>
-
-<h3>Can I use the information here to treat a patient?</h3>
-
-<p>
-No. The page provides general educational information and does not
-provide patient-specific diagnosis or treatment instructions.
-</p>
-
-<h3>Is the Dental Clinic Simulator a real clinical simulator?</h3>
-
-<p>
-It is a digital interactive simulation designed around simplified
-dental cases and workflows. It does not reproduce all aspects of
-real clinical practice.
-</p>
-
-</section>
 
 </main>
 
 <footer>
-
-<p>
-© 2026 <strong>Odontix</strong> • Dental Clinic Simulator
-</p>
-
-<p>
-Educational content for dental students, beginners and dentistry
-enthusiasts.
-</p>
-
-<p>
-<a href="index.html">Home</a> ·
-<a href="dental-game.html">Simulator</a> ·
-<a href="privacy-policy.html">Privacy Policy</a>
-</p>
-
+  <p><strong>🦷 ODONTIX</strong> · Dental Clinic Simulator</p>
+  <p>Educational content for dental students, beginners and dentistry enthusiasts.</p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="dental-game.html">Simulator</a> ·
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+  <p>© 2026 Odontix. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
-
