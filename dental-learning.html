@@ -282,8 +282,11 @@
         const feedback=document.getElementById("feedback-"+key);const item=answers[key];
         if(!selected){unanswered++;feedback.className="feedback incorrect";feedback.textContent="Not answered. "+item.explanation;return;}
         if(selected.value===item.answer){score++;feedback.className="feedback correct";feedback.textContent="Correct. "+item.explanation;}
-        else{feedback.className="feedback incorrect";feedback.textContent="Review this answer. "+item.explanation;
-      });
+        else {
+  feedback.className="feedback incorrect";
+  feedback.textContent="Review this answer. "+item.explanation;
+}
+});
       result.innerHTML="<h3>Quiz result: "+score+" / 12</h3><p>You answered "+score+" questions correctly.</p><p>"+unanswered+" question(s) were left unanswered.</p><p>Review the explanations and try again. This score reflects this introductory quiz only.</p>";
       result.scrollIntoView({behavior:"smooth",block:"nearest"});
     });
